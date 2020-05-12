@@ -1635,7 +1635,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](c_r11.Country);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", c_r11.Country, " ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -1930,7 +1930,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "th", 17, 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Country");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Country ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2505,7 +2505,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["app-doctor"]],
       decls: 72,
       vars: 0,
-      consts: [[1, "team-section", "home-2", "padding-tb", 2, "background-image", "url(assets/css/bg-image/service-bg.jpg)"], [1, "container"], ["data-wow-delay", "0.3s", 1, "section-header", "wow", "fadeInUp"], [1, "team-area"], [1, "row", "justify-content-center", "align-items-center"], ["data-wow-delay", "0.3s", 1, "col-xl-2", "col-md-4", "col-12", "wow", "fadeInUp"], [1, "team-item", "style-2"], [1, "team-item-inner"], [1, "team-thumb"], ["src", "assets/images/team/01.jpg", "alt", "team-membar"], [1, "team-content"], [1, "member-name"], [1, "member-dagi"], [1, "member-details"], [1, "icon-style-list", "lab-ul"], [1, "icofont-phone"], [1, "icofont-envelope"], ["data-wow-delay", "0.4s", 1, "col-xl-2", "col-md-4", "col-12", "wow", "fadeInUp"], ["src", "assets/images/team/02.jpg", "alt", "team-membar"], ["data-wow-delay", "0.5s", 1, "col-xl-2", "col-md-4", "col-12", "wow", "fadeInUp"], ["src", "assets/images/team/03.jpg", "alt", "team-membar"]],
+      consts: [[1, "team-section", "home-2", "padding-tb", 2, "background-image", "url(assets/css/bg-image/service-bg.jpg)"], [1, "container"], ["data-wow-delay", "0.3s", 1, "section-header", "wow", "fadeInUp"], [1, "team-area"], [1, "row", "justify-content-center", "align-items-center"], ["data-wow-delay", "0.3s", 1, "col-xl-4", "col-md-4", "col-12", "wow", "fadeInUp"], [1, "team-item", "style-2"], [1, "team-item-inner"], [1, "team-thumb"], ["src", "assets/images/team/01.jpg", "alt", "team-membar"], [1, "team-content"], [1, "member-name"], [1, "member-dagi"], [1, "member-details"], [1, "icon-style-list", "lab-ul"], [1, "icofont-phone"], [1, "icofont-envelope"], ["data-wow-delay", "0.4s", 1, "col-xl-4", "col-md-4", "col-12", "wow", "fadeInUp"], ["src", "assets/images/team/02.jpg", "alt", "team-membar"], ["data-wow-delay", "0.5s", 1, "col-xl-4", "col-md-4", "col-12", "wow", "fadeInUp"], ["src", "assets/images/team/03.jpg", "alt", "team-membar"]],
       template: function DoctorComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -2954,6 +2954,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, HomeComponent);
 
         this._CoronanumbersService = _CoronanumbersService;
+        this.hello23 = "he";
 
         this._CoronanumbersService.getCorona().subscribe(function (data) {
           _this4.coronaData = data; // console.log(this.coronaData )
@@ -3835,7 +3836,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return countryN.filter(function (func) {
             //  console.log(func.Country.toLowerCase());
             //  console.log(inText.toLowerCase());
-            if (func.Country.toLowerCase().includes(inText.toLowerCase())) {
+            if (func.Country.toLowerCase().includes(inText.toLowerCase()) || func.CountryCode.toLowerCase().includes(inText.toLowerCase())) {
               return func;
             }
           });
