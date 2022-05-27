@@ -1,0 +1,106 @@
+<!-- <app-fixedtable></app-fixedtable>
+<div class="container-table table-responsive position-relative" >
+
+    <div class="position-relative ta2">
+        <table class="table table-responsive table-fixed text-white bg-info table-hover" >
+        
+            <thead>
+              <tr class="">
+                <th scope="col">Country Code</th>
+                <th scope="col">Country</th>
+                <th scope="col">Total Confirmed</th>
+                <th scope="col">New Confirmed</th>
+                <th scope="col">New Deaths</th>
+                <th scope="col">Total Deaths</th>
+                <th scope="col">Total Recovered</th>
+                <th scope="col">New Recovered</th>
+              </tr>
+            </thead>
+            <tbody class="text-dark">
+              <tr class="text-dark" *ngFor="let c of countries.Countries">
+                <th scope="row">{{c.CountryCode}}</th>
+                <td >{{c.Country}}</td>
+                <td>{{c.TotalConfirmed}}</td>
+                <td [style.backgroundColor]="c.NewConfirmed > 1? 'red' : '#17a2b8'">{{c.NewConfirmed}}</td>
+                <td [style.color]="c.NewDeaths > 1? 'red' : 'white'" >{{c.NewDeaths}}</td>
+                <td>{{c.TotalDeaths}}</td>
+                <td>{{c.TotalRecovered}}</td>
+                <td>{{c.NewRecovered}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+</div> -->
+
+
+
+<div class="container-table" >
+    <label class="col-form-label-lg font-weight-bold text-white-50" for="countryName">Country Name</label>
+    <input [(ngModel)]="country_name" name="countryName" class="w-75 shadow form-control text-info font-weight-bold fa-2x" type="text">
+    <h2 value class="text-white text-capitalize">Your Search For 
+      <span *ngIf="country_name" class="text-info">{{country_name}}</span> 
+      <span *ngIf="!country_name" class="text-danger">all Countries</span> 
+    </h2>
+
+    
+      <table id="myTable" class="table table-condensed table-striped bg-dark">
+        <tr >
+          <th>
+            <button class="h-25 btn btn-primary rounded-circle" (click)="getdata(CC)"><i class="fas fa-sort-numeric-up  "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-info rounded-circle" (click)="getdata(Country)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-warning rounded-circle" (click)="getdata(TConfirmed)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-danger rounded-circle" (click)="getdata(NConfirmed)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-danger rounded-circle" (click)="getdata(NDeaths)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-dark rounded-circle" (click)="getdata(TDeaths)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-light rounded-circle" (click)="getdata(TRecovered)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+          <th>
+            <button class="btn btn-success rounded-circle" (click)="getdata(NRecovered)"><i class="fas fa-sort-numeric-up "></i></button>
+          </th>
+        </tr>
+  
+        <thead>
+      <tr>
+        <th class="bg-primary" scope="col" style="width:10px;"data-name="CountryCode" #CC>Country Code
+        </th>
+        <th class="bg-info " scope="col" style="width:25%;"data-name="Country" #Country>Country </th>
+        <th class="bg-warning text-dark"scope="col" data-name="TotalConfirmed" #TConfirmed>Total Confirmed </th>
+        <th class="bg-danger"scope="col" data-name="NewConfirmed" #NConfirmed>New Confirmed</th>
+        <th class="bg-danger"scope="col" data-name="NewDeaths" #NDeaths>New Deaths</th>
+        <th class="bg-dark"scope="col" data-name="TotalDeaths" #TDeaths>Total Deaths</th>
+        <th class="bg-light text-dark"scope="col" data-name="TotalRecovered" #TRecovered>Total Recovered</th>
+        <th class="bg-success"scope="col" data-name="NewRecovered" #NRecovered>New Recovered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-dark" *ngFor="let c of countries.Countries | searchCn: country_name : sortSelector  " [className]="c.TotalConfirmed ===c.TotalRecovered ? 'bg-info' : 'bg-dark'" >
+        
+          <th [routerLink]="['/Country', c.CountryCode]" scope="row">{{c.CountryCode}}</th>
+          <th [routerLink]="['/Country',  c.Country]" class="col w-25" >{{c.Country}}   </th>
+          <td>{{c.TotalConfirmed | number}}</td>
+          <td [style.backgroundColor]="c.NewConfirmed > 1? 'red' : '#17a2b8'">{{c.NewConfirmed | number}}</td>
+          <td [style.color]="c.NewDeaths > 1? 'red' : 'white'" >{{c.NewDeaths | number}}</td>
+          <td>{{c.TotalDeaths | number}}</td>
+          <td>{{c.TotalRecovered | number}}</td>
+          <td>{{c.NewRecovered | number}}</td>
+        
+        </tr>
+      </tbody>
+  
+    </table>
+</div>
+<!-- <button (click)="getdata(TConfirmed)"></button> -->
+<!-- <input type="text"  class="text-danger" (Click)="getWord($event)" > -->

@@ -1,0 +1,37 @@
+<!-- Banner Section start here -->
+<section class="banner-section home-3">
+    <div class="banner-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6 col-12">
+                    <div class="content-part">
+                        <div class="banner-content">
+                            <h2 >COVID-19 Tracker</h2>
+                            <h4>Tatal Confirmed Corona Cases</h4>
+                            <h2 class="count-people">{{coronaData.Global.TotalConfirmed | number}}</h2>
+                            <ul class="lab-ul">
+                                <li>New Confirmed <span class="count-people">{{coronaData.Global.NewConfirmed | number}}</span></li>
+                                <li>New Deaths <span class="count-people">{{coronaData.Global.NewDeaths | number}}</span></li>
+                                <li>New Recovered <span class="count-people">{{coronaData.Global.NewRecovered | number}}</span></li>
+                              <br>
+                                <li>Total Confirmed <span class="count-people">{{coronaData.Global.TotalConfirmed | number}}</span></li>
+                                <li>Total Deaths <span class="count-people">{{coronaData.Global.TotalDeaths | number}}</span></li>
+                                <li>Total Recovered <span class="count-people">{{coronaData.Global.TotalRecovered | number}}</span></li>
+                            </ul>
+                            <a routerLink="/doctors" class="lab-btn style-2"><span>Meet the doctor</span></a>
+                            <a routerLink="/about" fragment="contact" class="lab-btn style-2"><span>CONTACT US</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="banner-round">
+                        <img src="assets/images/banner/home-3/01.png" alt="banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Section ending here -->
+
+

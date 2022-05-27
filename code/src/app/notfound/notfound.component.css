@@ -1,0 +1,20 @@
+/*@@@@@@@@@@@@@@   Fore Zero Page Start Here  @@@@@@@@@@@@@@@@@*/
+.fore-zero-page {
+    background: #f9fcff;
+    padding: 60px 0;
+    align-items: center; }
+    @media (min-width: 992px) {
+      .fore-zero-page {
+        padding: 110px 0; } }
+    .fore-zero-page .images {
+      text-align: center; }
+    .fore-zero-page .text-content {
+      max-width: 600px;
+      margin: 30px auto 0px; }
+      .fore-zero-page .text-content h3 {
+        font-size: 20px; }
+        @media (min-width: 576px) {
+          .fore-zero-page .text-content h3 {
+            font-size: 36px; } }
+      .fore-zero-page .text-content .lab-btn {
+        margin-top: 20px; }

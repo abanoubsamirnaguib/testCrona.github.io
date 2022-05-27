@@ -1,0 +1,14 @@
+.jumbotron1{
+    padding:150px 0px 0px 0px ;
+    background-image: url("../../assets/images/banner/home-3/01.jpg");
+}
+.jumbotron{
+    margin-bottom: 0px ! important;
+}
+.my-card
+{
+    position:absolute;
+    left:40%;
+    top:-20px;
+    border-radius:50%;
+}

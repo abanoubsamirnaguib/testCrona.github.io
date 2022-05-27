@@ -1,0 +1,61 @@
+<div class="jumbotron1">
+    
+    <button class="btn btn-outline-dark bg-info font-weight-bolder float-right mr-5" routerLink="/country">Go Back</button>
+    <div class="jumbotron bg-transparent">
+        <h1 class="display-4 text-light font-weight-bold">{{c.Country}}</h1>
+        <p class="lead text-light">{{c.Slug}}</p>
+        <hr class="my-2">
+        <!-- <p>More info</p> -->
+        <div class="row w-100">
+            <div class="col-md-4">
+                <div class="card border-info mx-sm-1 p-3">
+                    <div class="card border-info shadow text-info p-3 my-card" ><span class="fa fa-car" aria-hidden="true"></span></div>
+                    <div class="text-info text-center mt-3"><h4>Total Confirmed</h4></div>
+                    <div class="text-info text-center mt-2"><h1>{{c.TotalConfirmed | number}}</h1></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-success mx-sm-1 p-3">
+                    <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-eye" aria-hidden="true"></span></div>
+                    <div class="text-success text-center mt-3"><h4>New Confirmed</h4></div>
+                    <div class="text-success text-center mt-2"><h1>{{c.NewConfirmed | number}}</h1></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-danger mx-sm-1 p-3">
+                    <div class="card border-danger shadow text-danger p-3 my-card" ><span class="fa fa-heart" aria-hidden="true"></span></div>
+                    <div class="text-danger text-center mt-3"><h4>New Deaths</h4></div>
+                    <div class="text-danger text-center mt-2"><h1>{{c.NewDeaths | number}}</h1></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row w-100 mt-5">
+            <div class="col-md-4">
+                <div class="card border-warning mx-sm-1 p-3">
+                    <div class="card border-warning shadow text-warning p-3 my-card" ><span class="fa fa-inbox" aria-hidden="true"></span></div>
+                    <div class="text-warning text-center mt-3"><h4>Total Deaths</h4></div>
+                    <div class="text-warning text-center mt-2"><h1>{{c.TotalDeaths | number}}</h1></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-warning mx-sm-1 p-3">
+                    <div class="card border-warning shadow text-warning p-3 my-card" ><span class="fa fa-inbox" aria-hidden="true"></span></div>
+                    <div class="text-warning text-center mt-3"><h4>Total Recovered</h4></div>
+                    <div class="text-warning text-center mt-2"><h1>{{c.TotalRecovered | number}}</h1></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-warning mx-sm-1 p-3">
+                    <div class="card border-warning shadow text-warning p-3 my-card" ><span class="fa fa-inbox" aria-hidden="true"></span></div>
+                    <div class="text-warning text-center mt-3"><h4>New Recovered</h4></div>
+                    <div class="text-warning text-center mt-2"><h1>{{c.NewRecovered | number}}</h1></div>
+                </div>
+            </div>
+    
+         </div>
+        <!-- <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p> -->
+    </div>
+</div>

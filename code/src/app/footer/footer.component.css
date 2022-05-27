@@ -1,0 +1,93 @@
+.footer {
+    overflow: hidden;
+    background: url(../../assets/images/banner/home-3/01.jpg);
+  }
+  .footer .icons {
+    position: relative;
+    left: 40%;
+    padding: 3rem 0rem 1rem 0rem;
+    margin: auto;
+  }
+  .footer .icons a i,footer #CV2{
+    color: black;
+  }
+  .footer .icons a i, .footer #CV2 {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffc107;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+  }
+  @media (min-width: 1200px) {
+    .footer .icons a i {
+      margin: 0px 10px 50px 15px;
+    }
+  }
+  .footer #CV2 {
+    padding:5px !important ;
+  }
+  .footer #CV2:hover{background-color: #fff !important;}
+  .footer p {
+    position: relative;
+    top: 0%;
+  }
+  .footer p span {
+    font-family: "Lobster", cursive;
+    font-size: larger;
+    font-weight: bold;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+  }
+  .footer .up {
+    position: relative;
+    line-height: 20px;
+    width: 7%;
+    padding: 0px;
+    margin-bottom: 5px;
+    border-radius: 10%;
+  }
+  .footer .facebook:hover {
+    background-color: #4267b2 !important;
+    /*     background-color:rgba(66,103,178,1); */
+    /* border: black solid 1px; */
+  }
+  .footer .linkedin:hover {
+    background-color: #0077b4 !important;
+    /*     background-color:rgba(66,103,178,1); */
+    /* border: black solid 1px; */
+  }
+  .footer .twitter:hover {
+    background-color: #1ab2e8 !important;
+    /*     background-color:rgba(66,103,178,1); */
+    /* border: black solid 1px; */
+  }
+  .footer .github:hover {
+    background-color: #fff !important;
+    /*     background-color:rgba(66,103,178,1); */
+    /* border: black solid 1px; */
+  }
+  
+  /*mobile*/
+  @media (max-width: 768px) {
+    .footer .icons {
+      /* left: 20%; */
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .footer .icons #CV2 {
+      /* left: 50px; */
+      /* margin-left: 50px; */
+      /* margin-top: 25px; */
+      font-family: "Lobster", cursive;
+    }
+    .footer .up {
+      width: fit-content;
+      padding: 10px;
+    }
+    }
+  
